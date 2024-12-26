@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+button:focus,
+input:focus{
+  outline: none;
+  box-shadow: none;
+}
+a,
+a:hover{
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #ececec;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*------------------------------*/
+i{
+  margin-right: 5px;
+}
+.dropdown, .dropdown li, .dropdown ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.dropdown {
+  position:relative;
+  z-index:10000;
+  float:left;
+  width:100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.16);
+}
+.dropdown ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  background: #fff;
+  border-radius: 3px;
+  min-width: 200px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+  transition: 0.5s;
+  left: 0;
+}
+.dropdown ul ul {
+  top:0;
+}
+.dropdown li {
+  position:relative;
+  float:left;
+}
+.dropdown li:hover {
+  z-index:910;
+}
+.dropdown ul:hover, 
+.dropdown li:hover > ul, 
+.dropdown a:hover + ul, 
+.dropdown a:focus + ul {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown a {
+  color: #9c9c9c;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  padding: 20px 18px;
+  transition: all 0.15s;
+  position: relative;
+  border-radius: 3px;
+}
+
+.dropdown li ul li a{
+  padding: 10px 12px;
+}
+.dropdown ul li {
+  width:100%;
+}
+.dropdown li.edge ul {
+  left: inherit;
+  right:0;
+}
